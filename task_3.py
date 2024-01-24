@@ -6,12 +6,13 @@ def normalize_phone(phone_number):
 
     # Перевіряємо, чи номер починається з '38' або '380'
     if cleaned_number.startswith('38') and len(cleaned_number) > 9:
-        # Видаляємо '38' або '380' з початку номера
+        # Видаляємо '38'  з початку номера
         cleaned_number = cleaned_number[2:]
+        #print(f"cleaned_number- 2 number: {cleaned_number}")
 
     # Додаємо міжнародний код '+38' до номера
     cleaned_number = '+38' + cleaned_number
-
+    #print(f"cleaned_number +38: {cleaned_number}")
     return cleaned_number
 
 # Приклад використання
@@ -25,8 +26,8 @@ raw_numbers = [
     "(050)8889900",
     "38050-111-22-22",
     "38050 111 22 11   ",
-    "383812345678"  # Додано випадок з '3838'
 ]
+
 
 sanitized_numbers = [normalize_phone(num) for num in raw_numbers]
 
