@@ -1,3 +1,4 @@
+
 from datetime import datetime, timedelta
 
 def get_upcoming_birthdays(users):
@@ -32,8 +33,8 @@ def get_upcoming_birthdays(users):
 
 # Приклад використання
 users = [
-    {"name": "John Doe", "birthday": "2024.01.30"},
-    {"name": "Jane Smith", "birthday": "1990.01.27"}
+    {"name": "John Doe", "birthday": "2024.02.27"},
+    {"name": "Jane Smith", "birthday": "1990.01.30"}
 ]
 
 upcoming_birthdays = get_upcoming_birthdays(users)

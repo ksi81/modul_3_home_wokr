@@ -4,9 +4,10 @@ def get_numbers_ticket(minimum, maximum, quantity):
     if not 1 <= minimum <= maximum <=100:
         print("Invalid input parameters. Please ensure 1 <= min <= max <= 100")
         return []
-    if quantity<0:
-        print("Invalid input parameters. Please ensure quantity is non-negative.")
+    if quantity >30 or quantity<0:
+        print("Invalid input parameters. Please ensure quantity is non-negative or less than 30.")
         return []
+    
     
     unique_numbers = set() # collected list
 
@@ -19,5 +20,5 @@ def get_numbers_ticket(minimum, maximum, quantity):
     #print(sorted_numbers) # test sorted_numbers
     return sorted_numbers
 
-lottery_numbers = get_numbers_ticket(1, 49, 6)
+lottery_numbers = get_numbers_ticket(1, 100, 31)
 print("Ваші лотерейні числа:", lottery_numbers)
