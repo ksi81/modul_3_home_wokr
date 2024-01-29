@@ -27,3 +27,4 @@ def get_days_from_today():
 result = get_days_from_today()
 
 print(f"Різниця у днях: {result}")
+#test
